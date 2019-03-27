@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title></title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <script
+    type="text/javascript"
+    src="/js/lib/dummy.js"
+    
+  ></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+
+      <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/plug-ins/1.10.6/integration/bootstrap/3/dataTables.bootstrap.css">
+      <link rel="stylesheet" type="text/css" href="https://cs.csub.edu/~pflores/bs/bootstrap/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+      <script type="text/javascript" src="https://cdn.datatables.net/1.10.6/js/jquery.dataTables.min.js"></script>
+      <script type="text/javascript" src="https://cdn.datatables.net/plug-ins/1.10.6/integration/bootstrap/3/dataTables.bootstrap.js"></script>
+      <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+  <style id="compiled-css" type="text/css">
+         <style type="text/css" class="init"> body {
+       font-size: 140%;
+   }
+   </style>
+  </style>
+
+
+  <!-- TODO: Missing CoffeeScript 2 -->
+
+  <script type="text/javascript">
+
+
+    window.onload=function(){
+      
+$(document).ready(function () {
+  var companyTable=  $('#jobs').DataTable();   
+    $('#jobs').on('click', 'tr', function () {
+       var name = $('td', this).eq().text();
+       console.log( companyTable.row(this).data()[1]);
+      $("#company-full-name").val(companyTable.row(this).data()[1]);
+      $("#company-short-name").val(companyTable.row(this).data()[2]);
+      $('#DescModal').modal("show");
+    });
+});
+
+    }
+
+</script>
+
+</head>
+<body>
+    <div class="panel panel-info">
+    <div class="panel-heading">
+         <h3 class="panel-title">On click row  popup will get open </h3>
+
+    </div>
+    <table id="jobs" class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Job Title</th>
+                <th>Company</th>
+                <th>Salary</th>
+                <th>Location</th>
+                <th>Date Posted</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!--Made it easier, so no more redundant copypasta in other pages-->
+            <tr>
+                <td>1</td>
+                <td>VP Marketing</td>
+                <td>Devify</td>
+                <td>22.38</td>
+                <td>222 Lillian Hill</td>
+                <td>2015-02-17</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Administrative</td>
+                <td>Skiba</td>
+                <td>10.92</td>
+                <td>3 Corscot Terrace</td>
+                <td>2015-02-03</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Database Admini</td>
+                <td>Dynazzy</td>
+                <td>36.72</td>
+                <td>5082 Butterfield Ter</td>
+                <td>2015-01-30</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Quality Control</td>
+                <td>Realmix</td>
+                <td>23.48</td>
+                <td>598 Independence Cir</td>
+                <td>2015-02-19</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Health Coach II</td>
+                <td>Linkbuzz</td>
+                <td>17.11</td>
+                <td>18 Donald Plaza</td>
+                <td>2015-02-17</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Biostatistician</td>
+                <td>Roomm</td>
+                <td>36.37</td>
+                <td>3 Almo Terrace</td>
+                <td>2015-02-16</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Assistant Profe</td>
+                <td>Shufflester</td>
+                <td>29.43</td>
+                <td>640 Towne Terrace</td>
+                <td>2015-02-13</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Analog Circuit</td>
+                <td>Tagcat</td>
+                <td>25.66</td>
+                <td>316 Claremont Road</td>
+                <td>2015-02-21</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Structural Engi</td>
+                <td>Tagchat</td>
+                <td>35.55</td>
+                <td>809 Butterfield Park</td>
+                <td>2015-02-10</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Senior Develope</td>
+                <td>Browsecat</td>
+                <td>21.62</td>
+                <td>5 Sachs Court</td>
+                <td>2015-01-30</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>Human Resources</td>
+                <td>Jaxbean</td>
+                <td>32.00</td>
+                <td>6 Corscot Street</td>
+                <td>2015-02-10</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>Analyst Program</td>
+                <td>Jetpulse</td>
+                <td>28.13</td>
+                <td>30 Eggendart Place</td>
+                <td>2015-02-20</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="modal fade" id="DescModal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">�</button>
+                 <h3 class="modal-title">Job Requirements & Description</h3>
+
+            </div>
+            <div class="modal-body">
+            
+            <div class="row dataTable">
+                                                <div class="col-md-4">
+                                                    <label class="control-label">job title</label>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <input type="text" class="form-control" maxlength="50" id="company-full-name" name="companyFullName">
+                                                </div>
+                                            </div>
+
+                                            <br>
+
+                                            <div class="row dataTable">
+                                                <div class="col-md-4">
+                                                    <label class="control-label">Company</label>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <input type="text" class="form-control" maxlength="30" id="company-short-name" name="companyShortName">
+                                                </div>
+                                            </div>
+                              <br>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default " data-dismiss="modal">Apply!</button>
+                <button type="button" class="btn btn-primary">Close</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+  
+  <script>
+    // tell the embed parent frame the height of the content
+    if (window.parent && window.parent.parent){
+      window.parent.parent.postMessage(["resultsFrame", {
+        height: document.body.getBoundingClientRect().height,
+        slug: "t53cyutt"
+      }], "*")
+    }
+
+    // always overwrite window.name, in case users try to set it manually
+    window.name = "result"
+  </script>
+</body>
+</html>
